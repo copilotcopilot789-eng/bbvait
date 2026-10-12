@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 80" width="300" height="80">
+  <!-- Société Générale Logo -->
+  <g>
+    <!-- Carré rouge -->
+    <rect x="0" y="15" width="35" height="35" fill="#E60028"/>
+    <!-- Carré noir -->
+    <rect x="0" y="15" width="35" height="17.5" fill="#000000"/>
+    
+    <!-- Texte SOCIETE GENERALE -->
+    <text x="45" y="35" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#000000">
+      SOCIETE
+    </text>
+    <text x="45" y="52" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#000000">
+      GENERALE
+    </text>
+  </g>
+</svg>

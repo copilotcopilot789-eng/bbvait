@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <title>BBVA it - Area clienti</title>
+    <link rel="stylesheet" href="styles/dashboard.css?v=20260814-2">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <div class="dashboard-container">
+        <!-- Sidebar Rouge -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="sg-logo">
+                    <img src="assets/images/image.png" alt="BBVA" class="sg-logo-img">
+                </div>
+            </div>
+
+            <nav class="sidebar-nav">
+                <a href="#" class="nav-item active" data-action="synthese">
+                    <i class="fas fa-home"></i>
+                    <span>Home</span>
+                </a>
+                <a href="#" class="nav-item" data-action="comptes">
+                    <i class="fas fa-credit-card"></i>
+                    <span>I miei conti</span>
+                </a>
+                <a href="#" class="nav-item" data-action="virements">
+                    <i class="fas fa-exchange-alt"></i>
+                    <span>Bonifici</span>
+                </a>
+                <a href="#" class="nav-item" data-action="cartes">
+                    <i class="fas fa-wallet"></i>
+                    <span>Le mie carte</span>
+                </a>
+                <a href="#" class="nav-item" data-action="epargne">
+                    <i class="fas fa-piggy-bank"></i>
+                    <span>Risparmio</span>
+                </a>
+                <a href="#" class="nav-item" data-action="parametres">
+                    <i class="fas fa-cog"></i>
+                    <span>Impostazioni</span>
+                </a>
+            </nav>
+
+            <div class="sidebar-footer">
+                <a href="#" class="nav-item" id="logout-btn">
+                    <i class="fas fa-sign-out-alt"></i>
+                    <span>Disconnessione</span>
+                </a>
+            </div>
+        </aside>
+
+        <!-- Main Content - Blanc -->
+        <main class="main-content">
+            <header class="top-header">
+                <div class="header-left">
+                    <h1>Buongiorno<span id="user-name">Client</span></h1>
+                    <p class="header-subtitle">Benvenuto nel tuo spazio personale</p>
+                </div>
+                <div class="header-right">
+                    <button class="icon-btn" data-action="notifications">
+                        <i class="fas fa-bell"></i>
+                        <span class="notification-badge">3</span>
+                    </button>
+                    <button class="icon-btn" data-action="messages">
+                        <i class="fas fa-envelope"></i>
+                        <span class="notification-badge">5</span>
+                    </button>
+                    <div class="user-profile">
+                        <img src="https://ui-avatars.com/api/?name=MAURICE+BYNE&background=E60028&color=fff"
+                            alt="Profile">
+                    </div>
+                </div>
+            </header>
+
+            <!-- Comptes Section -->
+            <section class="accounts-section">
+                <h2 class="section-title">Panoramica </h2>
+                <div class="accounts-grid">
+                    <div class="account-card primary">
+                        <div class="card-header">
+                            <div class="card-info">
+                                <span class="card-type">Conto corrente</span>
+                                <span class="card-number">•••• <span id="account-last-digits">6157</span></span>
+                            </div>
+                            <span class="account-status"><i class="fas fa-check-circle"></i>attivo</span>
+                        </div>
+                        <div class="card-balance">
+                            <span class="balance-label">Saldo disponibile</span>
+                            <span class="balance-amount" id="main-balance">1 795 000 EUR</span>
+                        </div>
+                        <div class="card-footer">
+                            <button class="card-btn" data-action="virement">
+                                <i class="fas fa-paper-plane"></i>
+                              Bonifico
+                            </button>
+                            <button class="card-btn" data-action="operations">
+                                <i class="fas fa-list"></i>
+                              Operazioni
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="account-card savings">
+                        <div class="card-header">
+                            <div class="card-info">
+                                <span class="card-type">Libretto di risparmio</span>
+                                <span class="card-number">•••• 7832</span>
+                            </div>
+                            <i class="fas fa-piggy-bank"></i>
+                        </div>
+                        <div class="card-balance">
+                            <span class="balance-label">Risparmio disponibile</span>
+                            <span class="balance-amount">320 000 €</span>
+                        </div>
+                        <div class="card-footer">
+                            <button class="card-btn" data-action="retirer">
+                                <i class="fas fa-arrow-down"></i>
+                               Ritirare
+                            </button>
+                            <button class="card-btn" data-action="deposer">
+                                <i class="fas fa-arrow-up"></i>
+                             Depositare
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Cartes Bancaires Visuelles -->
+            <section class="cards-visual-section">
+                <h2 class="section-title">Le mie carte bancarie</h2>
+                <div class="cards-carousel">
+                    <div class="bank-card sg-gold">
+                        <div class="card-chip"></div>
+                        <div class="card-logo-small">
+                            <div class="sg-squares-mini">
+                                <div class="square red"></div>
+                                <div class="square black"></div>
+                            </div>
+                        </div>
+                        <div class="card-number-display">4532 8821 6547 ****</div>
+                        <div class="card-holder">
+                            <div>
+                                <span class="card-label">Titolare</span>
+                                <span class="card-name" id="card-holder-name">Mélanie Tausha</span>
+                            </div>
+                            <div>
+                                <span class="card-label">Scadere</span>
+                                <span class="card-expiry">12/28</span>
+                            </div>
+                        </div>
+                        <div class="card-network">
+                            <span class="visa-logo">VISA</span>
+                        </div>
+                        <div class="card-actions">
+                            <button class="mini-btn" data-action="bloquer-carte" title="Bloquer la carte">
+                                <i class="fas fa-lock"></i>
+                            </button>
+                            <button class="mini-btn" data-action="details-carte" title="Détails">
+                                <i class="fas fa-info-circle"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="bank-card sg-classic">
+                        <div class="card-chip"></div>
+                        <div class="card-logo-small">
+                            <div class="sg-squares-mini">
+                                <div class="square red"></div>
+                                <div class="square black"></div>
+                            </div>
+                        </div>
+                        <div class="card-number-display">4532 8821 6547 ****</div>
+                        <div class="card-holder">
+                            <div>
+                                <span class="card-label">Titolare</span>
+                                <span class="card-name">Mélanie Tausha</span>
+                            </div>
+                            <div>
+                                <span class="card-label">Scadere</span>
+                                <span class="card-expiry">12/28</span>
+                            </div>
+                        </div>
+                        <div class="card-network">
+                            <span class="mastercard-logo">
+                                <span class="mc-circle red"></span>
+                                <span class="mc-circle yellow"></span>
+                            </span>
+                        </div>
+                        <div class="card-actions">
+                            <button class="mini-btn" data-action="bloquer-carte" title="Bloquer la carte">
+                                <i class="fas fa-lock"></i>
+                            </button>
+                            <button class="mini-btn" data-action="details-carte" title="Détails">
+                                <i class="fas fa-info-circle"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Historique des Transactions -->
+            <section class="transactions-section">
+                <div class="section-header">
+                    <h2 class="section-title">Ultime operazioni</h2>
+                    <div class="filter-buttons">
+                        <button class="filter-btn active" data-filter="all">Tutte</button>
+                        <button class="filter-btn" data-filter="virements">Bonifici</button>
+                        <button class="filter-btn" data-filter="cartes">Mappa</button>
+                        <button class="filter-btn" data-filter="prelevements">Prelevamenti</button>
+                    </div>
+                </div>
+
+                <div class="transactions-list">
+
+
+                    <div class="transaction-item income" data-type="virement">
+                        <div class="transaction-icon">
+                            <i class="fas fa-arrow-down"></i>
+                        </div>
+                        <div class="transaction-details">
+                            <span class="transaction-name">Bonifico SEPA ricevuto- Mélanie Tausha</span>
+                            <span class="transaction-date">11/05/2025</span>
+                        </div>
+                        <div class="transaction-amount positive">+50 000,00 €</div>
+                        <button class="transaction-btn" data-action="details-transaction">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </div>
+
+
+
+
+                    <div class="transaction-item income" data-type="virement">
+                        <div class="transaction-icon">
+                            <i class="fas fa-arrow-down"></i>
+                        </div>
+                        <div class="transaction-details">
+                            <span class="transaction-name">Bonifico  Istantaneo da FINECO PRIVATE BANKING </span>
+                            <span class="transaction-date">09/06/2025</span>
+                        </div>
+                        <div class="transaction-amount positive">+45 000,00 €</div>
+                        <button class="transaction-btn" data-action="details-transaction">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </div>
+
+                    <div class="transaction-item expense" data-type="carte">
+                        <div class="transaction-icon">
+                            <i class="fas fa-shopping-bag"></i>
+                        </div>
+                        <div class="transaction-details">
+                            <span class="transaction-name">Acquisto SAC - VST</span>
+                            <span class="transaction-date">16/04/2025</span>
+                        </div>
+                        <div class="transaction-amount negative">-5 850,10 €</div>
+                        <button class="transaction-btn" data-action="details-transaction">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </div>
+
+                    <div class="transaction-item expense" data-type="carte">
+                        <div class="transaction-icon">
+                            <i class="fas fa-plane"></i>
+                        </div>
+                        <div class="transaction-details">
+                            <span class="transaction-name">ITA Airways - Business class</span>
+                            <span class="transaction-date">27/04/2025</span>
+                        </div>
+                        <div class="transaction-amount negative">-3200 €</div>
+                        <button class="transaction-btn" data-action="details-transaction">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </div>
+
+                    <div class="transaction-item income" data-type="virement">
+                        <div class="transaction-icon">
+                            <i class="fas fa-building"></i>
+                        </div>
+                        <div class="transaction-details">
+                            <span class="transaction-name">bonifico ordinario  giorgini Immobiliare SI</span>
+                            <span class="transaction-date">23/11/2024</span>
+                        </div>
+                        <div class="transaction-amount positive">+121 000,00 €</div>
+                        <button class="transaction-btn" data-action="details-transaction">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </div>
+
+                    <div class="transaction-item expense" data-type="prelevement">
+                        <div class="transaction-icon">
+                            <i class="fas fa-home"></i>
+                        </div>
+                        <div class="transaction-details">
+                            <span class="transaction-name">Prelievi locali privati</span>
+                            <span class="transaction-date">06/10/2024</span>
+                        </div>
+                        <div class="transaction-amount negative">-22 500,00 €</div>
+                        <button class="transaction-btn" data-action="details-transaction">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </div>
+
+                    <div class="transaction-item expense" data-type="carte">
+                        <div class="transaction-icon">
+                            <i class="fas fa-utensils"></i>
+                        </div>
+                        <div class="transaction-details">
+                            <span class="transaction-name">Restaurant Le Jules Verne</span>
+                            <span class="transaction-date">31/10/2024</span>
+                        </div>
+                        <div class="transaction-amount negative">- 520,04 €</div>
+                        <button class="transaction-btn" data-action="details-transaction">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </div>
+
+                    <div class="transaction-item income" data-type="virement">
+                        <div class="transaction-icon">
+                            <i class="fas fa-arrow-down"></i>
+                        </div>
+                        <div class="transaction-details">
+                            <span class="transaction-name">Bonifico - Dividendi azionari</span>
+                            <span class="transaction-date">28/09/2024</span>
+                        </div>
+                        <div class="transaction-amount positive">+9 000,00 €</div>
+                        <button class="transaction-btn" data-action="details-transaction">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </div>
+
+                    <div class="transaction-item expense" data-type="carte">
+                        <div class="transaction-icon">
+                            <i class="fas fa-car"></i>
+                        </div>
+                        <div class="transaction-details">
+                            <span class="transaction-name">Fattura SIG </span>
+                            <span class="transaction-date">20/09/2024</span>
+                        </div>
+                        <div class="transaction-amount negative">-1 020,00 €</div>
+                        <button class="transaction-btn" data-action="details-transaction">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <button class="load-more-btn" data-action="load-more">
+                    <i class="fas fa-sync-alt"></i>
+                    Afficher plus d'opérations
+                </button>
+            </section>
+        </main>
+    </div>
+
+    <!-- Avertissement de démonstration affiché avant toute action du dashboard -->
+    <div id="dashboard-action-modal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="dashboard-action-title" aria-describedby="dashboard-action-description" aria-hidden="true">
+        <div class="modal-content-blocked dashboard-action-content">
+            <button class="modal-close" type="button" data-dashboard-modal-close aria-label="Fermer">&times;</button>
+            <div class="dashboard-action-logo">
+                <div style="display: flex; justify-content: center;">
+                <img src="assets/images/image.png" alt="Logo utilisé dans cette simulation">
+            </div>
+
+          
+            <div class="modal-icon-warning"><i class="fas fa-exclamation-triangle" aria-hidden="true"></i></div>
+            <h2 id="dashboard-action-title">Account temporaneamente bloccato</h2>
+            <p class="modal-main-text" id="dashboard-action-description">
+               
+            </p>
+            <div class="blocked-info-box dashboard-demo-info">
+                <div class="info-row">
+                    <span class="info-label">Conto corrente</span>
+                    <span class="info-value">•••• 6157</span>
+                </div>
+                <div class="info-row">
+                    <span class="info-label">Importo di svincolo</span>
+                    <span class="info-value"> 58 367 €</span>
+                </div>
+            </div>
+            <div class="dashboard-demo-options">
+                <section>
+                    <h3><i class="fas fa-phone-alt" aria-hidden="true"></i> Contatti </h3>
+                    <p>Numero :09 69 36 96 96 </p>
+                    <p>Disponibilità : 24h/24, 7j/7</p>
+                </section>
+                <section>
+                    <h3><i class="fas fa-building" aria-hidden="true"></i> Agenzia</h3>
+                    <p>Recatevi presso l'agenzia di vostra scelta per procedere allo sblocco del vostro conto.</p>
+                </section>
+            </div>
+            <p class="dashboard-demo-safety">
+              BBVA Italia
+            </p>
+            <div class="modal-actions">
+                <button class="btn-modal-secondary" type="button" data-dashboard-modal-close>Chiudi</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Nouveau virement -->
+    <div id="transfer-modal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="transfer-title">
+        <div class="modal-content-blocked transfer-modal-content">
+            <button class="modal-close" type="button" data-close-modal aria-label="Fermer">&times;</button>
+            <div class="modal-icon-transfer"><i class="fas fa-paper-plane"></i></div>
+            <h2 id="transfer-title">Effectuer un virement</h2>
+            <p class="modal-main-text">Le montant sera débité immédiatement de votre compte courant.</p>
+            <form id="transfer-form" novalidate>
+                <div class="transfer-balance">Solde disponible : <strong id="transfer-balance"></strong></div>
+                <div class="form-group">
+                    <label for="beneficiary-name">Nom du bénéficiaire</label>
+                    <input id="beneficiary-name" name="beneficiaryName" type="text" maxlength="80" required autocomplete="name">
+                </div>
+                <div class="form-group">
+                    <label for="beneficiary-iban">IBAN du bénéficiaire</label>
+                    <input id="beneficiary-iban" name="iban" type="text" maxlength="34" required spellcheck="false" placeholder="FR14 2004 1010 0505 0001 3M02 606">
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="transfer-amount">Montant</label>
+                        <div class="amount-input"><input id="transfer-amount" name="amount" type="number" min="0.01" step="0.01" required><span>€</span></div>
+                    </div>
+                    <div class="form-group">
+                        <label for="transfer-reference">Motif</label>
+                        <input id="transfer-reference" name="reference" type="text" maxlength="100" required placeholder="Ex. Facture août">
+                    </div>
+                </div>
+                <p id="transfer-error" class="form-error" role="alert"></p>
+                <div class="modal-actions">
+                    <button class="btn-modal-secondary" type="button" data-close-modal>Annuler</button>
+                    <button class="btn-modal-primary" type="submit"><i class="fas fa-check"></i> Confirmer le virement</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Reçu et détail d'une opération -->
+    <div id="receipt-modal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="receipt-title">
+        <div class="modal-content-blocked receipt-modal-content">
+            <button class="modal-close" type="button" data-close-modal aria-label="Fermer">&times;</button>
+            <div class="receipt-success"><i class="fas fa-check-circle"></i></div>
+            <h2 id="receipt-title">Virement effectué</h2>
+            <p class="modal-main-text" id="receipt-subtitle">Votre opération a bien été enregistrée.</p>
+            <div class="receipt-card">
+                <div class="receipt-brand"><img src="assets/images/sg-logo.svg" alt="SG"><span>Justificatif de virement</span></div>
+                <div class="info-row"><span class="info-label">Référence</span><span class="info-value" id="receipt-id"></span></div>
+                <div class="info-row"><span class="info-label">Date</span><span class="info-value" id="receipt-date"></span></div>
+                <div class="info-row"><span class="info-label">Bénéficiaire</span><span class="info-value" id="receipt-beneficiary"></span></div>
+                <div class="info-row"><span class="info-label">IBAN</span><span class="info-value" id="receipt-iban"></span></div>
+                <div class="info-row"><span class="info-label">Motif</span><span class="info-value" id="receipt-reference"></span></div>
+                <div class="info-row receipt-total"><span class="info-label">Montant envoyé</span><span class="info-value" id="receipt-amount"></span></div>
+                <div class="receipt-status"><i class="fas fa-check"></i> Exécuté</div>
+            </div>
+            <div class="modal-actions receipt-actions">
+                <button class="btn-modal-primary" id="print-receipt" type="button"><i class="fas fa-print"></i> Imprimer le reçu</button>
+                <button class="btn-modal-secondary" type="button" data-close-modal>Fermer</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="scripts/dashboard.js?v=20260814-2"></script>
+</body>
+
+</html>
